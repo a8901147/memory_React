@@ -1,0 +1,36 @@
+.button {
+  &,
+  &:link,
+  &:visited {
+    color: currentColor;
+    padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+    background: var(--color-accent);
+    border: none;
+    border-radius: var(--size-radius);
+    font-weight: 900;
+    transition: all 0.2s;
+  }
+
+  &[type="reset"],
+  &[type="reset"]:link,
+  &[type="reset"]:visited {
+    background: var(--color-background);
+    font-weight: 900;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 1rem 2rem rgba(var(--color-dark), 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    outline: none;
+    box-shadow: 0 0.5rem 1rem rgba(var(--color-dark), 0.15);
+    transform: translateY(0);
+  }
+}
+
+.button + .button {
+  margin-left: calc(var(--size-bezel) * 2);
+}
